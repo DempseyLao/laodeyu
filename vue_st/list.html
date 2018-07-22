@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script src="http://code.jquery.com/jquery-1.8.0.min.js"></script>
+		<script src="http://mockjs.com/dist/mock.js"></script>
+		
+	</head>
+
+	<body>
+		<ul id="app1">
+			<li v-for="item in items">{{item.label}}</li>
+		</ul>
+		<pre></pre>
+		<div id="name" style="color: red;">
+			1111
+		</div>
+		<script src="js/vue.js"></script>
+	</body>
+	<script type="text/javascript">
+		var vm = new Vue({
+			el: '#app1',
+			name: 'HelloWorld',
+			data: function() {
+				return {
+					msg: 'Welcome to Your Vue.js App',
+					items: [{
+							label: 'coding',
+							isfin: false
+						},
+						{
+							label: 'walking',
+							isfin: true
+						}
+					]
+				}
+			}
+		})
+		
+		var data2 = Mock.mock({
+				'account|1-2': "_name",
+				'pwd|1-2': 1
+			
+		});
+		$('<pre>').text(JSON.stringify(data2.account, null, 4)).appendTo('body')
+		$('#name').text(JSON.stringify(data2.pwd, null, 4)).appendTo('body')
+		
+	</script>
+
+</html>

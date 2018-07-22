@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<script type="text/javascript" src="https://cdn.bootcss.com/vue/2.2.2/vue.min.js"></script>
+		<style type="text/css">
+			input {
+				outline: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div id="box">
+		<div class="" style="width: 350px;" v-show="issho">
+			<div id="">
+				<img src="img/login/login_head.jpg" />
+			</div>
+			<div class="" style="height: 50px;text-align: center;margin: 0 auto;font-family: 黑体 ;font-size: 19px;border-bottom: solid 1px #F4F4F4;">
+				<div class=""  v-on:click="toggle()" style="float: left;width: 175px;padding-top: 10px;border-right: solid 1px #F4F4F4;">
+					扫码登录
+				</div>
+				<div class="" v-on:click="toggl()" style="padding-top: 10px;">
+					账户登录
+				</div>
+
+			</div>
+			<div class="" style="height: 225px; ">
+
+				<div class="" style="border: solid 1px #BDBDBD;margin: 30px 22px 0px 22px;">
+					<div style="float: left;"><img src="img/login/pe.png" /></div>
+					<div id="">
+						<input type="" name="" id="" value="" / style="height: 36px;border: none;">
+					</div>
+				</div>
+
+				<div class="" style="border: solid 1px #BDBDBD;margin: 20px 22px 0px 22px;">
+					<div style="float: left;"><img src="img/login/unc.png" /></div>
+					<div id="">
+						<input type="" name="" id="" value="" / style="height: 36px;border: none;">
+					</div>
+				</div>
+
+				<div class="" style="margin: 20px 20px 0px 20px;float:right ;font-size: 12px;">
+					忘记密码
+				</div>
+				<div class="" style="margin: 60px 20px 0px 22px;float:none ;font-size: 12px;">
+					<img src="img/login/dl.png" />
+				</div>
+			</div>
+			<div id="" style="height: 50px;background-color: #FCFCFC;">
+				<div id="" style="float: left;">
+					<img src="img/login/qq.png" /><img src="img/login/wx.png" />
+				</div>
+				<div id="" style="float: right;">
+					<img src="img/login/ljzc.png" />
+				</div>
+			</div>
+		</div>
+		
+			
+   <!-- -->
+    <div v-show="isShow" style="width: 350px;"><div id="">
+				<img src="img/login/login_head.jpg" />
+			</div>
+			<div class="" style="height: 50px;text-align: center;margin: 0 auto;font-family: 黑体 ;font-size: 19px;border-bottom: solid 1px #F4F4F4;">
+				<div class=""  v-on:click="toggle()" style="float: left;width: 175px;padding-top: 10px;border-right: solid 1px #F4F4F4;">
+					扫码登录
+				</div>
+				<div class="" v-on:click="toggl()" style="padding-top: 10px;">
+					账户登录
+				</div>
+
+			</div>
+			<div class="" style="height: 265px; ">
+                 <div id="" style="text-align: center; margin: 0 auto;padding-top: 20px;">
+                 	<img src="img/login/ewm.png"/>
+                 </div>
+				<div class="">
+					<img src="img/login/ewm_inf.png"/>
+				</div>
+			</div>
+			<div id="" style="height: 50px;background-color: #FCFCFC;">
+				<div id="" style="float: left;">
+					<img src="img/login/qq.png" /><img src="img/login/wx.png" />
+				</div>
+				<div id="" style="float: right;">
+					<img src="img/login/ljzc.png" />
+				</div>
+				
+			</div>
+		</div></div>
+   
+
+		
+
+	</body>
+	<script type="text/javascript">
+	  window.onload = function(){
+      var vm = new Vue({
+        el:'#box',
+        data:{
+          isShow:false,
+          issho:true
+        },
+        methods:{
+          toggle:function(){
+            this.isShow = true ;
+            this.issho = false; 
+          },
+          toggl:function(){
+            this.isShow = false;
+             this.issho = true; 
+          }
+          
+        }
+      });
+    }
+	</script>
+
+</html>
