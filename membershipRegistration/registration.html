@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width,initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="registration.min.css" />
+		
+	</head>
+	<body>
+		<!--这个模块为测试例子模块，调用方法传入ID即可
+		适用多场景，需要的时候只需要在点击显示处添加id即可，兼容手机端-->
+		<!--开发测试阶段所有的警告均以弹窗的形式显示-->
+		<!--自带短信验证和信息提交后台，创建存放数据的数据表即可-->
+		<div id="onclick.id">
+			点击打开会员注册
+		</div>
+	     
+ 
+
+
+	</body>
+	<script src="registration.min.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript">
+		registration.registrationShow("onclick.id") //调用插件方法传入触发处的id（这里以onclick.id为例）
+		//		registration.registrationSuccess("success","href","login&regist.html")//成功按钮事件调用方法传入id，close（关闭弹窗）,href(跳转地址)，参数三（"../.html"）地址，如仅需关闭可不需要地址参数
+        registration.registrationSuccess("success","close");
+	</script>
+
+</html>
